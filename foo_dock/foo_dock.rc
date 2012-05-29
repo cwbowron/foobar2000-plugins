@@ -1,0 +1,138 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BLANK DIALOGEX 0, 0, 96, 60
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "foo_dock"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_RENAME_DIALOG DIALOGEX 0, 0, 186, 47
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Custom Title"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,26,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,93,26,50,14
+    EDITTEXT        IDC_NAME,7,7,172,14,ES_AUTOHSCROLL
+END
+
+IDD_PREFERENCES DIALOGEX 0, 0, 285, 259
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Show docking arrows on title bar",IDC_SHOW_ARROWS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,120,10
+    CONTROL         "Minimize panels when minimizing main window",IDC_MIN_ON_MAIN_MIN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,19,160,10
+    CONTROL         "Process Expansion Tagz",IDC_USE_EXPANSION_TAGZ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,31,93,10
+    CONTROL         "Use Transparency",IDC_USE_TRANSPARENCY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,43,74,10
+    LTEXT           "opacity (active):",IDC_STATIC,33,60,54,8
+    EDITTEXT        IDC_EDIT_OPACITY_ACTIVE,91,58,47,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_OPACITY_ACTIVE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,58,10,14
+    LTEXT           "opacity (inactive):",IDC_STATIC,28,77,59,8
+    EDITTEXT        IDC_EDIT_OPACITY_INACTIVE,91,75,47,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_OPACITY_INACTIVE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,139,75,10,14
+    LTEXT           "foo_dockable_panels by Christopher Bowron <chris@bowron.us>",IDC_STATIC,7,244,212,8
+    EDITTEXT        IDC_EDIT_SNAPPING_DISTANCE,71,121,47,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_SNAPPING_DISTANCE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,119,121,10,14
+    LTEXT           "Snapping Distance:",IDC_STATIC,7,123,62,8
+    LTEXT           "(pixels)",IDC_STATIC,133,124,24,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_RENAME_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

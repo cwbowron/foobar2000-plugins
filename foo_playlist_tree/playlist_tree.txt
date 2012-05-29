@@ -1,0 +1,163 @@
+= Intro =
+
+Playlist Tree, at its core, begas as a playlist manager that builds
+playlists as trees.  Most audio players use a list based approach to
+playlists, but I wanted to be able to create hierarchies in my
+playlists, so that I could have greater control of how I listened to
+music.
+
+Playlist Tree has become one of the most powerful playlist managers
+that I have used.  That power comes at a price of a fairly steep
+learning curve to use it to its full potential.  
+
+PT acts a Columns UI Panel, and this article will assume that you
+already known how to make the PT Panel appear in your layout.  If you
+don't know how to operate Columns UI, please ask someone other than me
+;-).  This article also assumes some familiarity with foobar2000
+titleformatting. 
+
+= Nodes =
+
+PT has 3 types of nodes in its trees.  First, it supports nodes that
+represent a single playable item.  These items can be dropped onto the
+playlist tree panel from a playlist view or from the Windows
+Explorer.   Second, it has what I refer to as static folders, which
+can contain playable items or other static folders, or the third type
+of nodes, the query.  Queries are what give PT its power.  
+
+All of these nodes can be moved around by dragging and dropping them in the
+panel, and items can be copied rather than moved if you hold down
+shift when you begin dragging.  
+
+When you drop folders from windows explorer, it will create folders
+for each directory, and subdirectory, and playable nodes for audio files.
+
+== Queries ==
+
+Queries are PT's automatic playlists.  They let you enter the criteria
+for which tracks should show up in the results, and how you want the
+results to be laid out in the tree.  They also let you place limits on
+the size of resultant list in the form of number of tracks, duration,
+filesize and number of subfolders.
+
+=== Source ===
+(see: http://wiki.bowron.us/index.php/Playlist_Tree_Tutorial#Source_Directives)
+
+Source instructs PT which files to use as possible candidates for
+the playlist.  In most situations @database is probably the desired
+source.  But other sources exist such as @drop<> for using playlists
+and directories as a source, @node<> for using other tree nodes as
+source and @playlists and @playlist 
+
+=== Criteria ===
+
+Criteria lets you prune files from your source.  If you want all the
+files in the source to show up in the resultant tree, then leave the
+criteria blank.  Otherwise, you can use the same syntax as
+foo_playlist_gen to remove non-matching tracks.  For example, if you
+wanted only tracks by the Beatles that you have rated 4 or higher, you
+can use "artist HAS beatles AND rating GREATER 3" for your criteria.
+
+=== Format ===
+
+Format specifies how the resultant playlist will be arranged.  It use
+the foobar2000 titleformatting syntax.  Tree layers are split using
+the | character.  If you wanted all the files to be put into folders
+based on their artist, then the album and finally the title, the
+format string would look like "%artist%|%album%|%title%".  
+
+=== Population Sort Order ===
+
+Population sort order determines the order in which songs go through
+the playlist generation process.  Its especially useful when you are
+using the maximum options.  For example, if you wanted a list of 10
+random songs, you would set the Population Sort Order to "$rand()" and
+the maximum to 10 tracks.
+
+=== Playlist Generation Process ===
+
+Under the hood, the tree in a query basically gets generated like this:
+
+1 - make a list of all possible songs based on source
+2 - sort the list based on population sort order.
+3 - prune off items that don't match criteria
+4 - for each item, add it to the tree based on format.  
+5 - stop if you reach the end of the list or hit the maximum whatever.
+6 - if Sort by display name is check, sort by display name.
+
+= Random Things You Should Known When Using PT =
+
+If you hold shift while draggind and dropping nodes, you can make a
+copy rather than move.
+
+By default, right clicking on a node will give the normal foobar2000
+context menu options, holding down shift while right clicking or
+middle clicking on a node will give you the playlist tree specific
+context menu.  (These are configurable)
+
+PT is very configurable.  To get to the preferences select
+File->Preferences from main menu, then look under Media
+Library->Playlist Tree Panel. 
+
+You can configure what happens when you select, double click, and
+middle click on nodes. 
+
+PT adds its main menu options under Library->Playlist Tree.
+
+In addition to the main Playlist Tree panel, PT also adds a Playlist
+Tree Search panel you can use in your Columns UI layout to quickly
+search your trees.
+
+You probably also want my foo_cwb_hooks plugin.  
+http://wiki.bowron.us/index.php/Foobar2000:Hooks
+
+I like getting email telling me how much you like my programs.  I also
+keep track of bugs and feature requests.  If you have questions on how
+to do something, please use the forums.  Other people may benefit
+from the information or respond that way.  My email is chris@bowron.us
+
+The playlist tree discussion on the foobar2000 forums is at
+http://www.hydrogenaudio.org/forums/index.php?showtopic=29435
+
+I maintain my own forums at http://bowron.us/smf/index.php
+
+I make and distribute PT because I enjoy using it myself, and I think
+others also enjoy it.  But I also have a job, a fiancee, a mortgage
+payment, and a life.  I wish I could implement every cool feature
+people suggest and respond to everyone's post, but I have a limited
+amount of time that I can spend on this, so please forgive me if you
+don't hear back from me on a bug or a feature request or a question. 
+
+= Scheme =
+
+As of version 3.0.0, PT contains an embedded version of the Scheme
+programming language.  This is intended for advanced users.  
+
+The embedded scheme has the following benefits:
+
+1 - It is a real programming language with things like conditionals
+and loops.  
+
+2 - Because it is a real programming language, you can do things that
+are flat out impossible with a normal playlist tree query.
+
+3 - Because it is a real programming language, I can add ways to
+script foobar2000 actions.
+
+4 - It's easier to use than foobar2000 titleformatting for complex
+tasks (when you get the hang of it).
+
+5 - It's hardcore.
+
+See the MORE section for more information and links to examples.
+
+= MORE =
+
+More information about playlist tree can be found on the components
+homepage at http://wiki.bowron.us/index.php/Playlist_Tree.
+
+More information about the embedded version of scheme in playlist tree
+can be found at http://download.plt-scheme.org/doc/mzscheme/.  I also
+suggest finding on online scheme tutorial or the book "The Little Schemer".
+
+Example queries can be found at http://wiki.bowron.us/index.php/Example_Queries.

@@ -1,0 +1,133 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Englisch (USA) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PREFERENCES DIALOGEX 0, 0, 320, 284
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Device Paths",IDC_STATIC,7,3,306,111
+    EDITTEXT        IDC_EDIT_DEVICES,13,24,294,86,ES_MULTILINE | ES_AUTOHSCROLL
+    LTEXT           "Enter possible device paths seperated by newlines (ctrl-enter)",IDC_STATIC,17,13,200,8
+    LTEXT           "foo_sendtodevice\nby Christopher Bowron <chris@bowron.us>\n( cover art copying by Hanno Stock <hanno.stock@gmx.net> )",IDC_STATIC,7,256,206,28
+    CONTROL         "Tag original files with SENT_TO_DEVICE timestamp",IDC_CHECK_TAG_FILES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,119,262,10
+    CONTROL         "Process destination files with:",IDC_CHECK_RUN_SCRIPT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,133,111,10
+    COMBOBOX        IDC_COMBO_SCRIPT,20,146,279,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_LAME,11,226,288,13,ES_AUTOHSCROLL
+    LTEXT           "Lame command line (for mp3 conversion)",IDC_STATIC,11,214,131,8
+    CONTROL         "Prompt for conversion to mp3",IDC_CHECK_PROMPT_MP3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,201,264,10
+    CONTROL         "Copy Cover Art",IDC_COPY_COVER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,166,306,10
+    EDITTEXT        IDC_COVER_FILENAME,68,178,231,13,ES_AUTOHSCROLL
+    LTEXT           "Cover Filename:",IDC_STATIC,11,180,55,8
+END
+
+IDD_USER_SELECTION DIALOGEX 0, 0, 299, 49
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Send To Device"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,97,30,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,151,30,50,14
+    CONTROL         "Export playlist?",IDC_EXPORT_PLAYLIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,29,65,10
+    COMBOBOX        IDC_SELECTIONS,16,12,268,17,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Destination:",IDC_STATIC,7,3,285,25
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        VERTGUIDE, 11
+        VERTGUIDE, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 277
+    END
+
+    IDD_USER_SELECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 44
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Englisch (USA) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

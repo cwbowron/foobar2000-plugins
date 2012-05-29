@@ -1,0 +1,168 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ART_LIST DIALOGEX 0, 0, 246, 225
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_IMAGES,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,232,211
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 250, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,188,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,126,188,50,14
+    EDITTEXT        IDC_EDIT_ART_FORMAT,7,24,236,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LABEL_FORMAT,7,53,236,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_THUMBNAIL_WIDTH,38,88,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_THUMBNAIL_HEIGHT,38,104,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Text",IDC_BUTTON_TEXT,171,86,50,14
+    PUSHBUTTON      "Background",IDC_BUTTON_BACKGROUND,171,104,50,14
+    LTEXT           "Image Labels:",IDC_STATIC,11,41,186,8
+    LTEXT           "Album Art Location:",IDC_STATIC,11,15,186,8
+    GROUPBOX        "Formatting",IDC_STATIC,7,7,236,68
+    GROUPBOX        "Thumbnail",IDC_STATIC,7,78,78,44
+    LTEXT           "Width:",IDC_STATIC,11,91,22,8
+    LTEXT           "Height:",IDC_STATIC,12,106,24,8
+    GROUPBOX        "Colors",IDC_STATIC,88,78,155,44
+    PUSHBUTTON      "Button1",IDC_BUTTON_FILL_TEXT,118,86,50,14
+    PUSHBUTTON      "Button1",IDC_BUTTON_FILL_BACK,118,104,50,14
+    GROUPBOX        "Actions",IDC_STATIC,7,126,236,47
+    COMBOBOX        IDC_COMBO_SELECTION_ACTION,59,137,184,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DOUBLE_CLICK_ACTION,59,154,184,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Selection:",IDC_STATIC,22,139,32,8
+    LTEXT           "Double Click:",IDC_STATIC,12,155,42,8
+END
+
+IDD_STARTUP_PREFERENCES DIALOGEX 0, 0, 308, 222
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_ACTIONS,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,11,21,222,190
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD,237,20,50,14
+    PUSHBUTTON      "Remove",IDC_BUTTON_REMOVE,237,37,50,14
+    GROUPBOX        "Startup Actions",IDC_STATIC,7,7,301,215
+END
+
+IDD_ADD_ACTION DIALOGEX 0, 0, 186, 49
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Action..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,41,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,94,28,50,14
+    COMBOBOX        IDC_COMBO_ACTIONS,7,7,172,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ART_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_STARTUP_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_ADD_ACTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

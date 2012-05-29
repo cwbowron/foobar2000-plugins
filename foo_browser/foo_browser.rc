@@ -1,0 +1,173 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BLANK DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_CONFIG DIALOGEX 0, 0, 327, 315
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Text Color",IDC_BUTTON_TEXT_COLOR,11,174,44,12
+    PUSHBUTTON      "Bkgnd Color",IDC_BUTTON_BACKGROUND_COLOR,59,174,44,12
+    GROUPBOX        "Panels",IDC_STATIC,7,3,318,90
+    GROUPBOX        "Appearance",IDC_STATIC,7,165,318,67
+    GROUPBOX        "Browser Playlist",IDC_STATIC,7,94,318,38
+    EDITTEXT        IDC_PLAYLIST,10,104,310,12,ES_AUTOHSCROLL
+    CONTROL         "Automatically Activate",IDC_AUTO_ACTIVATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,119,89,9
+    PUSHBUTTON      "Font",IDC_BUTTON_FONT,108,175,44,12
+    GROUPBOX        "Double Click Action",IDC_STATIC,7,134,318,31
+    COMBOBOX        IDC_DOUBLE_CLICK,10,144,310,88,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Hide Horizontal Scrollbar",IDC_SCROLLBAR_MAGIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,193,114,10
+    GROUPBOX        "Edge Style",IDC_STATIC,187,170,135,26
+    COMBOBOX        IDC_EDGE_STYLE,194,179,123,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Hide Column Headers",IDC_HIDE_HEADERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,205,84,10
+    CONTROL         "Replace Previous Playlist With New Playlist",IDC_REPLACE_LAST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,123,119,164,10
+    CONTROL         "Custom Selection Colors:",IDC_CUSTOM_COLORS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,217,91,8
+    PUSHBUTTON      "Hilite Color (Focus)",IDC_COLOR_SELECTION,113,209,80,11
+    PUSHBUTTON      "Hilite Color (Non-Focus)",IDC_COLOR_SELECTIONNONFOCUS,113,220,80,11
+    PUSHBUTTON      "Text Color (Focus)",IDC_COLOR_SEL_TEXT,196,209,80,11
+    PUSHBUTTON      "Text Color (Non-Focus)",IDC_COLOR_SEL_TEXT_NON,196,220,80,11
+    CONTROL         "Populate browsers on startup",IDC_POPULATE_ON_STARTUP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,233,111,10
+    PUSHBUTTON      "Edit",IDC_BUTTON_EDIT,237,15,50,14
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD,237,32,50,14
+    PUSHBUTTON      "Remove",IDC_BUTTON_REMOVE,238,49,50,14
+    CONTROL         "",IDC_LIST_PANELS,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,10,15,223,73
+    CONTROL         "Populate playlist on startup",IDC_POPULATE_PLAYLIST_ON_STARTUP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,245,103,10
+    CONTROL         "Show item counts in [All]",IDC_SHOW_ITEMCOUNTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,257,94,10
+    CONTROL         "Show [All]",IDC_SHOWALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,269,48,10
+END
+
+IDD_PANEL_SETUP DIALOGEX 0, 0, 334, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Panel Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,115,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,169,74,50,14
+    EDITTEXT        IDC_EDIT_LABEL,50,7,277,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FORMAT,50,24,277,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SORT,50,41,277,14,ES_AUTOHSCROLL
+    LTEXT           "Label:",IDC_STATIC,27,11,20,8
+    LTEXT           "Format:",IDC_STATIC,21,27,26,8
+    LTEXT           "Sort:",IDC_STATIC,30,44,17,8
+    COMBOBOX        IDC_COMBO_PREC,50,59,48,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Precedence:",IDC_STATIC,6,61,41,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BLANK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        VERTGUIDE, 10
+        VERTGUIDE, 36
+        VERTGUIDE, 85
+        VERTGUIDE, 86
+        VERTGUIDE, 188
+        VERTGUIDE, 190
+        VERTGUIDE, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 305
+    END
+
+    IDD_PANEL_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 327
+        VERTGUIDE, 50
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
